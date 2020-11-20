@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package TempMonitorSink;
+
+// The greeting service definition.
+service TempMonitorServer
+{
+    rpc UpdateSubSystemTemp (SubSysIdAndTemp) returns (empty_param) {}
+}
+
+message empty_param {}
+
+// The request message containing the user's name.
+message SubSysIdAndTemp
+{
+    int32 SubSysId = 1;
+    float Temp = 2;
+}
